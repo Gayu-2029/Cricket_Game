@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1>Cricket Game</h1>
+    <div class="cricket">
+    <img src="https://static.vecteezy.com/system/resources/previews/010/850/903/original/3d-illustration-cricket-bat-ball-and-wicket-png.png" alt="cricket-img" class="cricket-img"></div>
+    <button
+      onclick="
+  let computerChoice=generateComputerChoice ();
+  let resultMsg = getResult('Bat', computerChoice);
+  finalResult('Bat',computerChoice,resultMsg);">
+      <img src="https://images.vexels.com/media/users/3/316363/isolated/preview/02c4382e5d08daec77666410ddae3e6a-cricket-bat.png" alt="Bat-img" class="choise-img">
+    </button>
+  <button onclick="
+   computerChoice=generateComputerChoice ();
+   resultMsg = getResult('Ball', computerChoice);
+  finalResult('Ball',computerChoice,resultMsg);">
+<img src="https://w7.pngwing.com/pngs/731/965/png-transparent-cricket-balls-cricket-bats-bowling-cricket-cricket-sphere-sports-%D0%BC%D1%8F%D1%87-thumbnail.png" alt="Ball-img" class="choise-img">  
+</button>
+  <button onclick="
+ computerChoice=generateComputerChoice ();
+   resultMsg = getResult('Stump', computerChoice);
+   finalResult('Stump',computerChoice,resultMsg);
+  ">
+<img src="https://cdn3d.iconscout.com/3d/premium/thumb/cricket-stump-9917345-8083970.png?f=webp" alt="Stump-img" class="choise-img">  
+</button>
+  <button onclick="localStorage.clear();
+ resetScore();
+ finalResult();
+  " ><img src="https://clipart-library.com/image_gallery/618583.png" alt="reset-img" class="choise-img"></button>
+  <h3 id="user-move"></h3>
+  <h3 id="computer-move"></h3>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+  </body>
+</html>
